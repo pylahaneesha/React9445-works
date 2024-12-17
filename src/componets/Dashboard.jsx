@@ -26,22 +26,26 @@ function Dashboard() {
               {display.map((e) => (
                 <Col xs={12} sm={6} md={3} key={e.id}>
                   <div className='card border-0'>
-                    <img
-                      src={e.Image}
-                      alt={e.id}
-                      className='card-img-top'
-                      style={{
-                        height: '250px',
-                        objectFit: 'contain',
-                        width: '100%',
-                        borderRadius: '10px'
-                      }}
-                    />
-                    <div className='card-body bg-white'>
-                      <h5 className='card-title text-center'>{e.id}</h5>
-                      <p className="card-text"><strong>Color:</strong> {e.Color}</p>
-                      <p className="card-text"><strong>Material:</strong> {e.Material}</p>
-                    </div>
+                    <Link to={`/sarees/${e.id}`} className="text-decoration-none">
+                      <img
+                        src={e.Image}
+                        alt={e.id}
+                        className='card-img-top'
+                        style={{
+                          height: '250px',
+                          objectFit: 'contain',
+                          width: '100%',
+                          borderRadius: '10px'
+                        }}
+                      />
+                      <div className='card-body bg-white'>
+                       
+                        <h5 className='card-title text-center text-dark'>{e.id}</h5>
+                       
+                        <p className="card-text text-dark"><strong>Color:</strong> {e.Color}</p>
+                        <p className="card-text text-dark"><strong>Material:</strong> {e.Material}</p>
+                      </div>
+                    </Link>
                   </div>
                 </Col>
               ))}
@@ -53,28 +57,32 @@ function Dashboard() {
               </Link>
             </div>
 
-            <div className='mt-5'>
+            <div className="mt-5">
               <center><h1 className="mb-4 text-primary">Dresses Collection</h1></center>
               <Row className="g-4">
                 {display1.map((ee) => (
                   <Col xs={12} sm={6} md={3} key={ee.id}>
                     <div className='card border-0'>
-                      <img
-                        src={ee.Image}
-                        alt={ee.id}
-                        className='card-img-top'
-                        style={{
-                          height: '250px',
-                          objectFit: 'contain',
-                          width: '100%',
-                          borderRadius: '10px'
-                        }}
-                      />
-                      <div className='card-body bg-white'>
-                        <h5 className='card-title text-center'>{ee.id}</h5>
-                        <p className="card-text"><strong>Color:</strong> {ee.Color}</p>
-                        <p className="card-text"><strong>Material:</strong> {ee.Material}</p>
-                      </div>
+                      <Link to={`/dresses/${ee.id}`} className="text-decoration-none">
+                        <img
+                          src={ee.Image}
+                          alt={ee.id}
+                          className='card-img-top'
+                          style={{
+                            height: '250px',
+                            objectFit: 'contain',
+                            width: '100%',
+                            borderRadius: '10px'
+                          }}
+                        />
+                        <div className='card-body bg-white'>
+                       
+                          <h5 className='card-title text-center text-dark'>{ee.id}</h5>
+                        
+                          <p className="card-text text-dark"><strong>Color:</strong> {ee.Color}</p>
+                          <p className="card-text text-dark"><strong>Material:</strong> {ee.Material}</p>
+                        </div>
+                      </Link>
                     </div>
                   </Col>
                 ))}
@@ -87,28 +95,32 @@ function Dashboard() {
               </div>
             </div>
 
-            <div className='mt-5'>
+            <div className="mt-5">
               <center><h1 className="mb-4 text-primary">Jean Tops Collection</h1></center>
               <Row className="g-4">
                 {display2.map((eee) => (
                   <Col xs={12} sm={6} md={3} key={eee.id}>
                     <div className='card border-0'>
-                      <img
-                        src={eee.Image}
-                        alt={eee.id}
-                        className='card-img-top'
-                        style={{
-                          height: '250px',
-                          objectFit: 'contain',
-                          width: '100%',
-                          borderRadius: '10px'
-                        }}
-                      />
-                      <div className='card-body bg-white'>
-                        <h5 className='card-title text-center'>{eee.id}</h5>
-                        <p className="card-text"><strong>Color:</strong> {eee.Color}</p>
-                        <p className="card-text"><strong>Material:</strong> {eee.Material}</p>
-                      </div>
+                      <Link to={`/jeans/${eee.id}`} className="text-decoration-none">
+                        <img
+                          src={eee.Image}
+                          alt={eee.id}
+                          className='card-img-top'
+                          style={{
+                            height: '250px',
+                            objectFit: 'contain',
+                            width: '100%',
+                            borderRadius: '10px'
+                          }}
+                        />
+                        <div className='card-body bg-white'>
+                         
+                          <h5 className='card-title text-center text-dark'>{eee.id}</h5>
+                        
+                          <p className="card-text text-dark"><strong>Color:</strong> {eee.Color}</p>
+                          <p className="card-text text-dark"><strong>Material:</strong> {eee.Material}</p>
+                        </div>
+                      </Link>
                     </div>
                   </Col>
                 ))}

@@ -2,24 +2,27 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import { Dressesdata } from '../Data/Dressesdata';
-
+import { Col, Row } from 'react-bootstrap';
+import Sidenav from './Sidenav';
 function Dresses() {
   return (
     <div className="bg-light min-vh-100" style={{ backgroundColor: '#f4f7fc' }}>
       <div className="container py-5">
+      <Row className="g-0">
+        <Col sm={2} className="p-0">
+          <Sidenav />
+        </Col>
+        <Col sm={10}>
         <center><h1 className="mb-4 text-primary">Dresses Collection</h1></center>
 
-        <Link to='/dashboard'>
-          <button className="btn btn-outline-primary mb-4">Back</button>
-        </Link>
-
+        
         <div className="row row-cols-1 row-cols-md-3 g-4">
           {
             Dressesdata.map((ee) => {
               return (
                 <div className="col" key={ee.id}>
                   <div className="card shadow-sm bg-white border-0 rounded-3">
-                   
+                    <Link to={`/dresses/${ee.id}`} className="text-decoration-none">
                     <img 
                       src={ee.Image} 
                       alt={ee.id} 
@@ -32,13 +35,18 @@ function Dresses() {
                       <p className="card-text text-muted"><strong>Material:</strong> {ee.Material}</p>
                       <p className="card-text text-muted"><strong>Price:</strong> {ee.Price}</p>
                     </div>
+                    </Link>
                   </div>
                 </div>
               );
             })
           }
         </div>
+        </Col>
+        </Row>
       </div>
+      
+      
     </div>
   );
 }

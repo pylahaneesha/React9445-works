@@ -2,20 +2,25 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import { Sareesdata } from '../Data/Saressdata';
+import Sidenav from './Sidenav';
+import { Col, Row } from 'react-bootstrap';
+
+
 
 function Sarees() {
   return (
+    
     <div className="bg-light min-vh-100" style={{ backgroundColor: '#f4f7fc' }}>
       <div className="container py-5">
-    
+      <Row className="g-0">
+        <Col sm={2} className="p-0">
+          <Sidenav />
+        </Col>
+        <Col sm={10}>
+        
         <center><h1 className="mb-4 text-primary">Sarees Collection</h1></center>
 
     
-        <div className="mb-4 text-start">
-          <Link to='/dashboard'>
-            <button className="btn btn-outline-primary">Back</button>
-          </Link>
-        </div>
 
         
         <div className="d-flex flex-wrap justify-content-between">
@@ -42,6 +47,8 @@ function Sarees() {
             })
           }
         </div>
+        </Col>
+        </Row>
       </div>
     </div>
   );

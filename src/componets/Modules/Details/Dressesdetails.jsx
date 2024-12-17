@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { Col, Row } from 'react-bootstrap';
-import { Sareesdata } from '../../Data/Saressdata';
+import { Dressesdata } from '../../Data/Dressesdata';
 import Sidenav from '../../Modules/Sidenav';
 import Topbar from '../Topbar';
 import { CartContext } from '../../context/Cartcontext';
 
-function Sareesdetails() {
+function Dressesdetails() {
   const { id } = useParams();
   const { cart, addToCart } = useContext(CartContext); 
-  const productDet = Sareesdata.find((item) => item.id == id);
+  const productDet = Dressesdata.find((item) => item.id == id);
 
   return (
     <div style={{ backgroundColor: '#f4f7fc', height: '100vh' }}>
@@ -37,7 +37,7 @@ function Sareesdetails() {
                 <img
                   src={productDet.Image}
                   alt={productDet.id}
-                  style={{ width: '300px' }}
+                  style={{ width: '200px' }}
                 />
               </div>
             </div>
@@ -48,4 +48,4 @@ function Sareesdetails() {
   );
 }
 
-export default Sareesdetails;
+export default Dressesdetails;
