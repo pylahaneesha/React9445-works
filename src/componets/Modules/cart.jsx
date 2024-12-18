@@ -2,7 +2,11 @@ import React, { useContext } from 'react';
 import { CartContext } from '../context/Cartcontext';
 
 function CartPage() {
-  const { cart } = useContext(CartContext);
+  const { cart, setCart } = useContext(CartContext); 
+
+  const removeFromCart = (productId) => {
+    setCart(cart.filter(product => product.id !== productId)); 
+  };
 
   return (
     <div className="container py-5">
@@ -21,6 +25,13 @@ function CartPage() {
                 <p>Color: {product.Color}</p>
                 <p>Price: {product.Price}</p>
                 <p>Material: {product.Material}</p>
+        
+                <button
+                  className="btn btn-danger"
+                  onClick={() => removeFromCart(product.id)}
+                >
+                  Remove
+                </button>
               </div>
             </div>
           ))}

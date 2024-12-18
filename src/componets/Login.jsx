@@ -22,7 +22,7 @@ function Login() {
               <input type="checkbox" className="form-check-input" id="rememberMe" />
               <label className="form-check-label" htmlFor="rememberMe">Remember me for 30 days</label>
             </div>
-            <p><Link to="/">Forgot password?</Link></p>
+            <p><Link to="/forgot">Forgot password?</Link></p>
             <div className="text-center">
               <Link to="/dashboard">
                 <button className="btn btn-primary w-100 mt-3">Login</button>

@@ -18,7 +18,7 @@ function Sareesdetails() {
           <Sidenav />
         </Col>
         <Col sm={10}>
-          <Topbar />
+        <Topbar />
           <div className="container py-5">
             <div className="d-flex justify-content-around align-items-center border rounded-3 p-4 bg-white shadow-sm">
               <div className="data" style={{ maxWidth: '400px' }}>
