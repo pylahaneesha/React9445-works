@@ -9,7 +9,7 @@ function Sidenav() {
         <li><Link to='/sarees' className='sidenav-link'>Sarees</Link></li>
         <li><Link to='/dresses' className='sidenav-link'>Dresses</Link></li>
         <li><Link to='/jeans' className='sidenav-link'>Tops</Link></li>
-        <li className="logout-item"><Link to='/React9445-works' className='sidenav-link'>Logout</Link></li>
+        <li className="logout-item"><Link to="/React9445-works" className='sidenav-link'>Logout</Link></li>
       </ul>
     </div>
   )
