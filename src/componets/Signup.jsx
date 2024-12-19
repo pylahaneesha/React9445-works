@@ -30,11 +30,11 @@ function Signup() {
               <input type="password" placeholder="Confirm your Password" className="form-control" required />
             </div>
             <div className="text-center">
-              <Link to="/">
+              <Link to="/React9445-works">
                 <button className="btn btn-primary w-100 mt-3">Sign Up</button>
               </Link>
             </div>
-            <p className="text-center mt-3">Already have an account? <Link to="/">Login</Link></p>
+            <p className="text-center mt-3">Already have an account? <Link to="/React9445-works">Login</Link></p>
           </form>
         </div>
       </div>

@@ -12,15 +12,17 @@ import Dressesdetails from './componets/Modules/Details/Dressesdetails';
 import Jeansdetails from './componets/Modules/Details/Jeansdetails';
 import { CartProvider } from './componets/context/Cartcontext';
 import CartPage from './componets/Modules/cart';
-import Forgot from './componets/Forgot'
+import Forgot from './componets/Forgot';
+
 function App() {
   return (
     <div>
     <Router>
     <CartProvider>
+  
       <Routes>
      
-        <Route path='/' element={ <Login />}></Route> 
+        <Route path='/React9445-works' element={ <Login />}></Route> 
         <Route path='/signup' element={ <Signup />}></Route>  
         <Route path='/dashboard' element={ <Dashboard />}></Route>
         <Route path='/sarees' element={ <Sarees />}></Route>
@@ -31,6 +33,7 @@ function App() {
         <Route path='/jeans/:id' element={ <Jeansdetails/>}></Route>
         <Route path="/cart" element={<CartPage />} />
         <Route path="/forgot" element={<Forgot/>} />
+      
        
        
       </Routes>
